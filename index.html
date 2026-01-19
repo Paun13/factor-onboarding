@@ -514,7 +514,7 @@
               </p>
 
               <div class="divider"></div>
-              ${videoBlock("nozzle-check-vid.mp4", "Видео: Nozzle Check")}
+              ${youtubeBlock("0rtTi9dCe0k", "Видео: Nozzle Check")}
 
               <div class="divider"></div>
               ${imgBlock("nozzle-check-1.png", "Nozzle Check 1")}
@@ -767,6 +767,22 @@
           </div>
         `;
       }
+      
+      function youtubeBlock(videoId, label) {
+  return `
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/${videoId}?playsinline=1&rel=0"
+        title="${label}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="width:100%; aspect-ratio:16/9; border-radius:12px;"
+      ></iframe>
+    </div>
+  `;
+}
+
 
       function noteBlock(kind, text) {
         const icon = kind === "warning" ? "icon-warning.svg" : "icon-tip.svg";
@@ -886,3 +902,4 @@
     </script>
   </body>
 </html>
+
